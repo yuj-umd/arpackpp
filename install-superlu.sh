@@ -1,11 +1,11 @@
 #!/bin/sh
 set -ex
-sluversion="5.2.0"
+sluversion="5.2.1"
 if [ ! -d "external/SuperLU_${sluversion}" ]; then
   mkdir -p external
   cd external
   extdir=$PWD
-  curl -o superlu_${sluversion}.tar.gz http://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_${sluversion}.tar.gz
+  curl -o superlu_${sluversion}.tar.gz  https://portal.nersc.gov/project/sparse/superlu/superlu_${sluversion}.tar.gz
   tar -xvf superlu_${sluversion}.tar.gz > /dev/null
 
   # 5.0 needs some massaging:
